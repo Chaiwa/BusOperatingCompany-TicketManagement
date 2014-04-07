@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+	
+<hibernate-mapping>
+    <class name="sos.pojo.dto.Branch" table="BRANCH">
+        <id name="id" type="long" column="id">
+            <generator class="native"/>
+        </id>
+        <property name="branchName" type="string" column="branch_name"/>
+        <property name="country" type="string" column="country"/>
+        <property name="city" type="string" column="city"/>
+        <property name="county" type="string" column="county"/>
+        <property name="district" type="string" column="district"/> 
+        <property name="phone" type="string" column="phone"/>     
+    </class>
+</hibernate-mapping>

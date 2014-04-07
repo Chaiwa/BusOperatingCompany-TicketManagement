@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="sos.pojo.dto.UserAdmin" table="ADMINUSER">
+        <id name="id" type="long" column="id">
+            <generator class="native"/>
+        </id>
+        <property name="name" type="string" column="name"/>
+        <property name="surname" type="string" column="surname"/>
+        <property name="phone" type="string" column="phone"/>
+        <property name="username" type="string" column="username"/>
+        <property name="password" type="string" column="password" />
+    </class>
+</hibernate-mapping>

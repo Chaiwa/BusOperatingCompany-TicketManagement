@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="sos.pojo.dto.Ticket" table="TICKET">
+        <id name="id" type="long" column="id">
+            <generator class="native"/>
+        </id>
+        <many-to-one name="journey" class="sos.pojo.dto.Journey" column="journey_id" not-null="true"/>
+        <many-to-one name="passenger" class="sos.pojo.dto.Passenger" column="passenger_id" not-null="true"/>
+        <many-to-one name="routeStation" class="sos.pojo.dto.RouteStation" column="rStation_id" not-null="true"/>
+        <many-to-one name="employee" class="sos.pojo.dto.UserEmployee" column="employee_id" not-null="true"/>
+        <property name="seatNumber" type="int" column="seat_number" />
+        <property name="takenDate" type="timestamp" column="taken_date"/>
+    </class>
+</hibernate-mapping>

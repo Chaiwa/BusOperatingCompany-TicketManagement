@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="sos.pojo.dto.Bus" table="BUS">
+	    <id name="id" type="long" column="id">
+	        <generator class="native"/>
+	    </id>
+	    <property name="plate" type="string" column="plate" unique="true"/>
+	    <property name="brand" type="string" column="brand" />
+	    <property name="model" type="string" column="model" />
+	    <property name="capacity" type="int" column="capacity" />
+	    <property name="modelYear" type="int" column="model_year"/>
+	</class>	    
+	    
+</hibernate-mapping>

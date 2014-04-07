@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="dialect">
+            org.hibernate.dialect.MySQLDialect
+        </property>
+        <property name="connection.driver_class">
+            com.mysql.jdbc.Driver
+        </property>
+        <property name="connection.url">
+            jdbc:mysql://localhost:3306/ticketsystem
+        </property>
+        
+		<property name="hibernate.connection.useUnicode">true</property>
+      	<property name="hibernate.connection.characterEncoding">UTF-8</property>
+    	
+		
+        <property name="connection.username">root</property>
+        <property name="connection.password"></property>
+        
+        <property name="show_sql">true</property>
+
+		
+        
+        
+		<mapping resource="sos/hbms/Branch.hbm.xml" />
+		<mapping resource="sos/hbms/Bus.hbm.xml" />
+		<mapping resource="sos/hbms/Driver.hbm.xml" />
+		<mapping resource="sos/hbms/Passenger.hbm.xml" />
+		<mapping resource="sos/hbms/Station.hbm.xml" />
+		<mapping resource="sos/hbms/UserAdmin.hbm.xml" />
+		<mapping resource="sos/hbms/Route.hbm.xml" />
+		<mapping resource="sos/hbms/RouteStation.hbm.xml" />
+		<mapping resource="sos/hbms/Journey.hbm.xml" />
+		<mapping resource="sos/hbms/Ticket.hbm.xml" />
+		<mapping resource="sos/hbms/UserEmployee.hbm.xml" />
+    </session-factory>
+</hibernate-configuration>

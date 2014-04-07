@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="sos.pojo.dto.RouteStation" table="ROUTESTATION">
+        <id name="id" type="long" column="id">
+            <generator class="native"/>
+        </id>
+        <many-to-one name="route" class="sos.pojo.dto.Route" column="route_id" not-null="true"/>
+        <many-to-one name="stop" class="sos.pojo.dto.Station" column="station_id" not-null="true"/>
+        <property name="price" type="double" column="price"/>
+        <property name="routeStationName" type="string" column="route_station_name"/>
+    </class>
+</hibernate-mapping>
